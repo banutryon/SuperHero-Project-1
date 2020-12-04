@@ -1,7 +1,9 @@
-#container {
-  margin-left: 100px;
+.hero {
+height: 30px;
+width: 100px;
 }
 
 body {
-  background-color: gray;
+
+  margin-left: 20rem;
 }
