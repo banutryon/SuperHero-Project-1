@@ -14,26 +14,24 @@ $(() => {
         //=================Heros for of=========================
         const heros = (data)
         heros.forEach((hero, i) => {
-          let str = hero.connections.groupAffiliation
-          let n = str.search("Avengers")
+          let ga = hero.connections.groupAffiliation
+          let team = ga.search("Avengers")
           // source=====https://www.w3schools.com/JSREF/jsref_search.asp
-          if (n >= 0) {
+          if (team >= 0) {
+            $(`<div>
+            <img src=${hero.images.sm} alt = "super">
+            <p> Name:  ${hero.name}</p>
+            <p>Intelligence: ${hero.powerstats.intelligence}</p><p>Strength: ${hero.powerstats.strength}</p><p>Combat: ${hero.powerstats.combat}</p>
+            <p>Full Name: ${hero.biography.fullName}</p>
+            </div>`).appendTo('.avengContainer')
+
 
             console.log(hero.name);
           }
         });
 
 
-          // const $hName =
-          // $('<dd>').addClass('heroName').text(data[i].name)
-          // $('dt').append($hName);
 
-
-
-        // const $name = $('<dt>').text('Name').appendTo('dl#info');
-        // const $hName =
-        // $('<dd>').addClass('heroName').text(data[i].name)
-        // $('dt').append($hName);
 
 
 
@@ -49,12 +47,6 @@ $(() => {
   });
 
 
-
-
-
-
-
-
 })
 
 
@@ -67,7 +59,16 @@ $(() => {
 //   const $li = $(`<li>`).text(`${data[i].name}`).appendTo($('.container'))
 ///////////////////////////////////
 
+// const $hName =
+// $('<dd>').addClass('heroName').text(data[i].name)
+// $('dt').append($hName);
 
+
+
+// const $name = $('<dt>').text('Name').appendTo('dl#info');
+// const $hName =
+// $('<dd>').addClass('heroName').text(data[i].name)
+// $('dt').append($hName);
 
 
 
