@@ -1,5 +1,5 @@
 $(() => {
-  $("button").on("click", (e) => {
+  $("form").on("click", (e) => {
     event.preventDefault();
     // const userInput = $('input[type="text"]').val();
 
@@ -10,35 +10,28 @@ $(() => {
       (data) => {
         console.log(data);
 
-
-        //=================Heros for of=========================
+        //==========Avengers=========================
         const heros = (data)
         heros.forEach((hero, i) => {
           let ga = hero.connections.groupAffiliation
-          let team = ga.search("Avengers")
+          let teamAvengers = ga.search("Avengers")
           // source=====https://www.w3schools.com/JSREF/jsref_search.asp
-          if (team >= 0) {
+          if (teamAvengers >= 0) {
             $(`<div>
-            <img src=${hero.images.sm} alt = "super">
+            <img class="btn" src=${hero.images.sm} alt = "super">
             <p> Name:  ${hero.name}</p>
             <p>Intelligence: ${hero.powerstats.intelligence}</p><p>Strength: ${hero.powerstats.strength}</p><p>Combat: ${hero.powerstats.combat}</p>
             <p>Full Name: ${hero.biography.fullName}</p>
-            </div>`).appendTo('.avengContainer')
+            </div>`).addClass('superHero').appendTo('.avengContainer')
 
+            // $('.btn').on('click', (event) => {
+            //   $('p').toggleClass()
+            // })
 
-            console.log(hero.name);
+            // console.log(hero.name);
           }
-        });
 
-
-
-
-
-
-
-
-
-
+        })
       },
       (error) => {
         console.log(error);
@@ -52,7 +45,31 @@ $(() => {
 
 
 
+
+
+
+
+
 // ===============Bone Yard=====================
+
+
+//=================Xmen=========================
+//   let ga1 = hero.connections.groupAffiliation
+//   let teamXmen = ga1.search("X-Men")
+//   // source=====https://www.w3schools.com/JSREF/jsref_search.asp
+//   if (teamXmen >= 0) {
+//     $(`<div>
+//     <img src=${hero.images.sm} alt = "super">
+//     <p> Name:  ${hero.name}</p>
+//     <p>Intelligence: ${hero.powerstats.intelligence}</p><p>Strength: ${hero.powerstats.strength}</p><p>Combat: ${hero.powerstats.combat}</p>
+//     <p>Full Name: ${hero.biography.fullName}</p>
+//     </div>`).appendTo('.avengContainer')
+//
+//
+// };
+//=================Xmen=========================
+
+
 // for (let i = 0; i < 3; i++) {
 //   // function list will pull the hero list and create a li and add it to a ul with the class list.
 //////////////////Use this to creat only one line per name.
