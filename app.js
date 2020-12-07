@@ -1,10 +1,8 @@
 $(() => {
-  $("form").on("click", (e) => {
-    event.preventDefault();
-    // const userInput = $('input[type="text"]').val();
 
+    const loadPage = () => {
     $.ajax({
-      url: `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json?=${$(event.target).val()}`,
+      url: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json",
       type: "GET",
     }).then(
       (data) => {
@@ -16,95 +14,51 @@ $(() => {
           let ga = hero.connections.groupAffiliation
           let teamAvengers = ga.search("Avengers")
           // source=====https://www.w3schools.com/JSREF/jsref_search.asp
+      //====Create an if statement to pull all the data I need====
           if (teamAvengers >= 0) {
             $(`<div>
-            <img class="btn" src=${hero.images.sm} alt = "super">
-            <p> Name:  ${hero.name}</p>
-            <p>Intelligence: ${hero.powerstats.intelligence}</p><p>Strength: ${hero.powerstats.strength}</p><p>Combat: ${hero.powerstats.combat}</p>
-            <p>Full Name: ${hero.biography.fullName}</p>
-            </div>`).addClass('superHero').appendTo('.avengContainer')
+            <div class= "popup-content">
+            <div class= "img-hover-zoom">
+            <button><img class="heroImg" src=${hero.images.sm} alt = "super"></button></div>
+            <p class= "name">${hero.name}</p><p>Real Name: ${hero.biography.fullName}</p>
+            <p class= "description">---Power Status---</p>
+            <p>Intelligence: ${hero.powerstats.intelligence}</p>
+            <p>Strength: ${hero.powerstats.strength}</p>
+            <p>Combat: ${hero.powerstats.combat}</p>
+            <p>Durability: ${hero.powerstats.durability}</p>
+            <p class ="description">---Appearance---</p>
+            <p>Gender: ${hero.appearance.gender}</p>
+            <p>Height: ${hero.appearance.height}</p>
+            <p>Weight: ${hero.appearance.weight}</p>
+            <p class= "description">---Occuupation---</p>
+            <p>${hero.work.occupation}</p>
 
-            // $('.btn').on('click', (event) => {
-            //   $('p').toggleClass()
-            // })
-
+            </div>
+            </div>`).addClass('popup-overlay').attr('id', hero.id).appendTo('.avengContainer')
+            //======create data for Modal===========
+            const $pTag = $(`#${hero.id} p`).addClass('stats')
+            const $btn = $(`#${hero.id} button`)
+            const $hero = $(`#${hero.id}`)
+            const $modal = $('#modal')
+            //======create button click for Modal===========
+            $($btn).on('click', (e) => {
+              $modal.empty()
+              $modal.append($hero.clone());
+              $('#modal, #modal p').removeClass('stats')
+            })
+            $($modal).on('click', (e) => {
+              $modal.addClass('stats')
+            })
             // console.log(hero.name);
           }
-
         })
       },
       (error) => {
         console.log(error);
       }
     );
-  });
-
+  }
+  loadPage()
+  // });
 
 })
-
-
-
-
-
-
-
-
-
-// ===============Bone Yard=====================
-
-
-//=================Xmen=========================
-//   let ga1 = hero.connections.groupAffiliation
-//   let teamXmen = ga1.search("X-Men")
-//   // source=====https://www.w3schools.com/JSREF/jsref_search.asp
-//   if (teamXmen >= 0) {
-//     $(`<div>
-//     <img src=${hero.images.sm} alt = "super">
-//     <p> Name:  ${hero.name}</p>
-//     <p>Intelligence: ${hero.powerstats.intelligence}</p><p>Strength: ${hero.powerstats.strength}</p><p>Combat: ${hero.powerstats.combat}</p>
-//     <p>Full Name: ${hero.biography.fullName}</p>
-//     </div>`).appendTo('.avengContainer')
-//
-//
-// };
-//=================Xmen=========================
-
-
-// for (let i = 0; i < 3; i++) {
-//   // function list will pull the hero list and create a li and add it to a ul with the class list.
-//////////////////Use this to creat only one line per name.
-//   const $li = $(`<li>`).text(`${data[i].name}`).appendTo($('.container'))
-///////////////////////////////////
-
-// const $hName =
-// $('<dd>').addClass('heroName').text(data[i].name)
-// $('dt').append($hName);
-
-
-
-// const $name = $('<dt>').text('Name').appendTo('dl#info');
-// const $hName =
-// $('<dd>').addClass('heroName').text(data[i].name)
-// $('dt').append($hName);
-
-
-
-
-
-// (data[keys[3]])
-// keys = Object.keys(data[0])
-// console.log(keys)
-// let [274] = userInput
-
-
-
-// $("form").on("submit", (e) => {
-//   event.preventDefault();
-//   const userInput = $('input[type="text"]').val();
-//
-//   $.ajax({
-//     url: `https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json?=${userInput}`,
-//     type: "GET",
-//   }).then(
-//     (data) => {
-//       console.log(data);
