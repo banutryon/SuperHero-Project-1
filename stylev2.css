@@ -1,4 +1,14 @@
+/*=======Media query========== */
+/* @media only screen and (min-width: 680px) {
+  .avengContainer {
+    background-color: red;
+  }
+  .avengContainer {
+    display: inline-flex;
+    flex-direction: row;
 
+  }
+} */
 /* =======All============= */
 * {
   font-family: 'Comic Neue', cursive;
@@ -48,6 +58,7 @@ body {
   justify-content: space-around;
   align-content: space-between;
 }
+
 button {
   margin: 15px;
   border: none;
@@ -59,7 +70,6 @@ button {
 }
 
 .heroImg: {
-  width: 120%;
   transition-property: all;
   transition-duration: 2s;
 }
@@ -106,6 +116,8 @@ p {
 }
 
 /* ==========Modal Background / positioning============= */
+
+
 #modal {
   position: fixed;
   z-index: 1;
@@ -220,6 +232,7 @@ p {
 
   }
 } */
+
 @keyframes name {
   0% {
     top: -600px
@@ -248,29 +261,4 @@ p {
   100% {
     left: 0px
   }
-}
-
-/*=======Media query========== */
-@media only screen and (max-width: 600px) {
-  .avengContainer {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-div .img-hover-zoom {
-  width: 300px;
-  overflow: hidden;
-  margin: 0;
-  }
-
-button {
-  margin: 15px;
-  border: none;
-  background: none;
-}
-
-
 }
