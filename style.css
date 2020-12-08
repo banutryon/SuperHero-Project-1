@@ -7,12 +7,27 @@
 }
 
 /* ========HEADER========= */
-.header {
-  display: block;
-  object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
+.falcon {
+  width: 150px;
+  height: 180px;
+  float: right;
+  animation-name: fal;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 2;
+
 }
+.thor {
+  width: 150px;
+  height: 180px;
+  float: right;
+  margin-right: 350px;
+  animation-name: thor;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
 
 header {
   background-image: url(pngegg.png);
@@ -22,12 +37,27 @@ header {
   background-position: center;
 }
 
-header:hover {}
+
 
 h2 {
   color: white;
+  font-size: 30px;
   text-align: center;
+  margin-top: -25px;
   margin-bottom: 20px;
+}
+footer {
+  text-align: center;
+}
+a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px 20px 5px 20px;
+
+
 }
 
 /*========= Background Image======== */
@@ -59,7 +89,6 @@ button {
 }
 
 .heroImg: {
-  width: 120%;
   transition-property: all;
   transition-duration: 2s;
 }
@@ -78,7 +107,7 @@ button {
   font-size: 60px;
   margin: 10x;
   position: relative;
-  animation: name;
+  animation-name: name;
   animation-duration: 4s;
   animation-fill-mode: forwards;
 }
@@ -121,7 +150,7 @@ p {
   background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 8px 17px 14px 2px #2F2E2D;
   animation-name: modalTransition;
-  animation-duration: .6s;
+  animation-duration: .7s;
   animation-timing-function: ease-in;
 }
 
@@ -191,35 +220,6 @@ p {
   }
 }
 
-/* @keyframes modalHover {
-  0% {
-
-  }
-
-  10% {
-
-  }
-
-  25% {
-
-  }
-
-  40% {
-
-  }
-
-  60% {
-
-  }
-
-  80% {
-
-  }
-
-  100% {
-
-  }
-} */
 @keyframes name {
   0% {
     top: -600px
@@ -249,9 +249,36 @@ p {
     left: 0px
   }
 }
+@keyframes fal {
+  0% {
+    float: right;
+    transform:translate(500px);
+
+
+  }
+
+  100% {
+    transform:translate(-3000px);
+
+
+  }
+}
+@keyframes thor {
+  0% {
+
+    transform:translateY(-500px);
+
+  }
+
+  100% {
+    transform:translateY(140px);
+
+
+  }
+}
 
 /*=======Media query========== */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
   .avengContainer {
     background-color: red;
     display: flex;
@@ -273,4 +300,4 @@ button {
 }
 
 
-}
+} */

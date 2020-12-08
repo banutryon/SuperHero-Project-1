@@ -1,20 +1,23 @@
 $(() => {
-
-    const loadPage = () => {
+  let searchData
+  const loadPage = () => {
     $.ajax({
       url: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json",
       type: "GET",
     }).then(
       (data) => {
         console.log(data);
-
+        searchData = data
         //==========Avengers=========================
         const heros = (data)
         heros.forEach((hero, i) => {
           let ga = hero.connections.groupAffiliation
           let teamAvengers = ga.search("Avengers")
+          let heroName = hero.name
+
+
           // source=====https://www.w3schools.com/JSREF/jsref_search.asp
-      //====Create an if statement to pull all the data I need====
+          //====Create an if statement to pull all the data I need====
           if (teamAvengers >= 0) {
             $(`<div>
             <div class= "popup-content">
@@ -51,6 +54,17 @@ $(() => {
             })
             // console.log(hero.name);
           }
+        //   $('form').on('click', (event) => {
+        //     const userInput = $('input[type="text"]').val();
+        //     let searchData = heroName.filter(heroName => name.name === userInput)
+        //     event.preventDefault();
+        //     console.log(userInput);
+        // });
+        // // console.log(heroName)
+        // console.log(name)
+
+
+
         })
       },
       (error) => {
@@ -58,6 +72,9 @@ $(() => {
       }
     );
   }
+
+
+  // });
   loadPage()
   // });
 
