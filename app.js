@@ -57,12 +57,7 @@ $(() => {
             })
             console.log($modal);
           }
-        //   $('form').on('click', (event) => {
-        //     const userInput = $('input[type="text"]').val();
-        //     let searchData = heroName.filter(heroName => name.name === userInput)
-        //     event.preventDefault();
-        //     console.log(userInput);
-        // });
+
         console.log(hero.id)
 
         // console.log(name)
