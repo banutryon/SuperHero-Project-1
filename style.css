@@ -42,6 +42,8 @@ h2 {
 
 footer {
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  margin-top: 10px;
 }
 
 a {
@@ -275,17 +277,24 @@ p {
 /* ========================================================= */
 @media only screen and (max-width: 900px) {
   header {
-    height: 25rem;
+    height: 20rem;
     margin-top: -70px;
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 40px;
     margin-top: -80px;
   }
 
   a {
-    font-size: 16px;
+    font-size: 12px;
+    margin: 5px;
+    padding: 10px 5px 10px; 5px;
+
+  }
+  footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      margin-top: 10px;
   }
 
   /*========= Heros======== */
@@ -298,23 +307,23 @@ p {
 
   button img {
     border-radius: 10px;
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
   }
 
   /* ==================MODAL===================== */
   /* ===========Title of stats======== */
   .name {
-    font-size: 90px;
+    font-size: 60px;
     margin: 10x;
   }
 
   .description {
-    font-size: 40px;
+    font-size: 30px;
   }
 
   p {
-    font-size: 30px;
+    font-size: 20px;
     padding: 3px;
   }
 
@@ -325,7 +334,7 @@ p {
     padding-top: 50px;
     margin-top: 10 auto;
     width: 80%;
-    height: 1000px;
-    top: 2%;
+    height: 750px;
+    top: 10%;
   }
 }
