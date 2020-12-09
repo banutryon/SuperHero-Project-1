@@ -1,13 +1,12 @@
 $(() => {
-  // let searchData
+
   const loadPage = () => {
     $.ajax({
       url: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json",
       type: "GET",
     }).then(
       (data) => {
-        console.log(data);
-        // searchData = data
+        // console.log(data);
         //==========Avengers=========================
         const heros = (data)
         heros.forEach((hero, i) => {

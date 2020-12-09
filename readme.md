@@ -16,13 +16,13 @@ The other files are copies and are not the working project.
 5. I found the search method using w3 schools and applied it to only pull avengers. My goal was to have button clicks to pull avengers, the spider verse, and x-men but after looking over my API I realized that it lacked consistency on calling each affiliation so I decided to just do the avengers.
 
 6. Create a if statement to allow  all of the Avengers to pull data independentlyIn the section I was able to get some help from Leland to understanding a different way to use an if statement.
-In this method I created a <div> with the class of popup-overlay " this is one of the class names I will use for my modal"
-Inside of this <div> will live all the information I need for my modal.
-I also created another <div> with the class name popup-content. This is the main class to provide my button clicks with the content they need.
-7. in the <div> with class popup-content create a <button> with an <img> inside of it.
-Using String interpolation I am able to attach the photos from the API to the <button>.
+In this method I created a div with the class of popup-overlay " this is one of the class names I will use for my modal"
+Inside of this div will live all the information I need for my modal.
+I also created another div with the class name popup-content. This is the main class to provide my button clicks with the content they need.
+7. in the div with class popup-content create a button with an img inside of it.
+Using String interpolation I am able to attach the photos from the API to the button.
 
-8. using String interpolation again I am able to attach all of my stats to <p> tags
+8. using String interpolation again I am able to attach all of my stats to p tags
 
 9. I also used a few different methods to add classes to show I understand different ways to do this.
 
