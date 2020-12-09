@@ -17,7 +17,7 @@
   animation-iteration-count: 2;
 
 }
-.thor {
+/* .thor {
   width: 150px;
   height: 180px;
   float: right;
@@ -26,7 +26,7 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
-}
+} */
 
 
 header {
@@ -36,7 +36,9 @@ header {
   height: 20rem;
   background-position: center;
 }
-
+h3 {
+  color: white;
+}
 
 
 h2 {
@@ -67,7 +69,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 50rem;
-  background-color: #333333;
+  background-color: #FFFFFF;
 }
 
 /*========= Heros======== */
@@ -82,34 +84,44 @@ button {
   margin: 15px;
   border: none;
   background: none;
+  border-radius: 10px;
+
+}
+button img {
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+}
+button img:hover {
+  transform: scale(1.25);
+  transition-duration: .5s;
 }
 
 .img-hover-zoom {
+  border-radius: 10px;
   overflow: hidden;
+
 }
 
-.heroImg: {
-  transition-property: all;
-  transition-duration: 2s;
-}
-
-.heroImg:hover {
-  transform: scale(1.1);
-  transition-duration: 1s;
-}
-
-/* ==========Stats container============ */
-.popup-content {}
 
 /*==============Hero stats================= */
 /* =============Hero Name====== */
+
+
+
 .name {
   font-size: 60px;
+  color: white;
   margin: 10x;
   position: relative;
   animation-name: name;
   animation-duration: 4s;
   animation-fill-mode: forwards;
+}
+
+#cardName {
+  font-size: 30px;
+  color: white
 }
 
 /* ==================MODAL===================== */
@@ -150,7 +162,7 @@ p {
   background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 8px 17px 14px 2px #2F2E2D;
   animation-name: modalTransition;
-  animation-duration: .7s;
+  animation-duration: 1s;
   animation-timing-function: ease-in;
 }
 
@@ -277,27 +289,209 @@ p {
   }
 }
 
-/*=======Media query========== */
-/* @media only screen and (max-width: 600px) {
-  .avengContainer {
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*=======================Media query=======================*/
+/* ========================================================= */
+@media only screen and (max-width: 600px) {
+  h2 {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: -25px;
+    margin-bottom: 20px;
+  }
+  footer {
+    text-align: center;
+  }
+  a {
+    font-size: 12px;
+    margin top: 20px;
+    padding: 5px;
   }
 
-div .img-hover-zoom {
-  width: 300px;
-  overflow: hidden;
-  margin: 0;
+  /*========= Background Image======== */
+  body {
+    background-size: auto;
+    height: 30rem;
   }
 
-button {
-  margin: 15px;
-  border: none;
-  background: none;
+  /*========= Heros======== */
+  button {
+    margin-bottom: 0;
+  }
+
+  button img {
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+  }
+
+  .heroImg:hover {
+    transform: scale(1.25);
+    transition-duration: .5s;
+  }
+
+  /*==============Hero stats================= */
+  /* =============Hero Name====== */
+
+  .cardName {
+    font-size: 30px;
+    color: white;
+    display: hidden;
+    text-align: center;
+    width: 200px;
+  }
+
+  /* ==================MODAL===================== */
+  /* ===========Title of stats======== */
+  .description {
+    font-size: 20px;
+    position: relative;
+    animation-name: stats;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  /* ==========Modal Background / positioning============= */
+  #modal {
+    position: fixed;
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 60px;
+    text-align: center;
+    margin: 0 auto;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    height: 600px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 8px 17px 14px 2px #2F2E2D;
+    animation-name: modalTransition;
+    animation-duration: .7s;
+    animation-timing-function: ease-in;
+  }
+
+  /*=======Animation========== */
+  @keyframes modalTransition {
+    0% {
+      width: 5%;
+      height: 5%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 10%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 10%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 10%, #000000 100%);
+    }
+
+    10% {
+      width: 20%;
+      height: 10%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 20%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 20%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 20%, #000000 100%);
+    }
+
+    25% {
+      width: 30%;
+      height: 20%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 35%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 35%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 35%, #000000 100%);
+    }
+
+    40% {
+      width: 50%;
+      height: 30%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 50%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 50%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 50%, #000000 100%);
+    }
+
+    60% {
+      width: 70%;
+      height: 45%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 65%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 65%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 65%, #000000 100%);
+    }
+
+    80% {
+      width: 80%;
+      height: 55%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 80%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 80%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 80%, #000000 100%);
+    }
+
+    100% {
+      width: 90%;
+      height: 60%;
+      background: #000000;
+      background: -moz-linear-gradient(-45deg, #000000 0%, #FFFFFF 100%, #000000 100%);
+      background: -webkit-linear-gradient(-45deg, #000000 0%, #FFFFFF 100%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #FFFFFF 100%, #000000 100%);
+    }
+  }
+
+  @keyframes name {
+    0% {
+      top: -600px
+    }
+
+    100% {
+      top: 0px
+    }
+  }
+
+  @keyframes stats {
+    0% {
+      bottom: -1000px
+    }
+
+    100% {
+      bottom: 0px
+    }
+  }
+
+  @keyframes p {
+    0% {
+      left: -1000px
+    }
+
+    100% {
+      left: 0px
+    }
+  }
+  @keyframes fal {
+    0% {
+      float: right;
+      transform:translate(500px);
+
+
+    }
+
+    100% {
+      transform:translate(-3000px);
+
+
+    }
+  }
+  @keyframes thor {
+    0% {
+
+      transform:translateY(-500px);
+
+    }
+
+    100% {
+      transform:translateY(140px);
+
+
+    }
+  }
+
 }
-
-
-} */

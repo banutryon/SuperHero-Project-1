@@ -23,7 +23,9 @@ $(() => {
             <div class= "popup-content">
             <div class= "img-hover-zoom">
             <button><img class="heroImg" src=${hero.images.sm} alt = "super"></button></div>
-            <p class= "name">${hero.name}</p><p>Real Name: ${hero.biography.fullName}</p>
+            <h3 class= "cardName">${hero.name}</h3>
+            <p class= "name">${hero.name}</p>
+            <p>Real Name: ${hero.biography.fullName}</p>
             <p class= "description">---Power Status---</p>
             <p>Intelligence: ${hero.powerstats.intelligence}</p>
             <p>Strength: ${hero.powerstats.strength}</p>
@@ -44,15 +46,16 @@ $(() => {
             const $hero = $(`#${hero.id}`)
             const $modal = $('#modal')
             //======create button click for Modal===========
-            $($btn).on('click', (e) => {
+            $($btn).on('click', () => {
               $modal.empty()
               $modal.append($hero.clone());
               $('#modal, #modal p').removeClass('stats')
+              $('#modal h3').css("display", "none")
             })
-            $($modal).on('click', (e) => {
+            $($modal).on('click', () => {
               $modal.addClass('stats')
             })
-            // console.log(hero.name);
+            console.log($modal);
           }
         //   $('form').on('click', (event) => {
         //     const userInput = $('input[type="text"]').val();
@@ -60,7 +63,8 @@ $(() => {
         //     event.preventDefault();
         //     console.log(userInput);
         // });
-        // // console.log(heroName)
+        console.log(hero.id)
+
         // console.log(name)
 
 

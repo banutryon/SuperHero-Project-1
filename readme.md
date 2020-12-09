@@ -1,5 +1,7 @@
 **How the app works**
 Click on the image to display a modal of the super hero stats
+When looking at my Project Please use app.js / style.css / index.html
+The other files are copies and are not the working project.
 
 **My PSEUDOCODE for JS**
 
@@ -29,4 +31,4 @@ Using String interpolation I am able to attach the photos from the API to the <b
 11. use functions created to create button clicks.
 Add clone function to allow the modal to pop up the data needed without taking away the images behind it.
 Add remove class 'status' to take away the display none I have added to this class in CSS.
-12. Create another button click that adds the class back to make the modal disappear. 
+12. Create another button click that adds the class back to make the modal disappear.
