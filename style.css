@@ -275,7 +275,7 @@ p {
 /* ========================================================= */
 @media only screen and (max-width: 900px) {
   header {
-    height: 30rem;
+    height: 25rem;
     margin-top: -70px;
   }
 
