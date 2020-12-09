@@ -1,5 +1,5 @@
 $(() => {
-  let searchData
+  // let searchData
   const loadPage = () => {
     $.ajax({
       url: "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/all.json",
@@ -7,16 +7,15 @@ $(() => {
     }).then(
       (data) => {
         console.log(data);
-        searchData = data
+        // searchData = data
         //==========Avengers=========================
         const heros = (data)
         heros.forEach((hero, i) => {
           let ga = hero.connections.groupAffiliation
+          // source=====https://www.w3schools.com/JSREF/jsref_search.asp
           let teamAvengers = ga.search("Avengers")
           let heroName = hero.name
 
-
-          // source=====https://www.w3schools.com/JSREF/jsref_search.asp
           //====Create an if statement to pull all the data I need====
           if (teamAvengers >= 0) {
             $(`<div>
@@ -37,7 +36,6 @@ $(() => {
             <p>Weight: ${hero.appearance.weight}</p>
             <p class= "description">---Occuupation---</p>
             <p>${hero.work.occupation}</p>
-
             </div>
             </div>`).addClass('popup-overlay').attr('id', hero.id).appendTo('.avengContainer')
             //======create data for Modal===========
@@ -55,26 +53,15 @@ $(() => {
             $($modal).on('click', () => {
               $modal.addClass('stats')
             })
-            console.log($modal);
+            // console.log($modal);
           }
-
-        console.log(hero.id)
-
-        // console.log(name)
-
-
-
         })
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }
-
-
-  // });
   loadPage()
-  // });
 
 })
