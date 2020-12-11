@@ -41,7 +41,7 @@ h3 {
   color: white;
   text-align: center;
   font-size: 30px;
-  margin-top: -16px;
+  margin-top: 5px;
 }
 
 h2 {
@@ -84,6 +84,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-content: space-between;
+  align-items: center;
 }
 
 button {
