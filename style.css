@@ -17,13 +17,13 @@
   animation-iteration-count: 1;
 }
 .thor {
-  margin-right: 380px;
-  margin-top: 48px;
-  width: 150px;
-  height: 180px;
-  float: right;
+  margin-left: 50%;
+  margin-right: 50%;
+  margin-bottom: 100px;
+  width: 170px;
+  height: 200px;
   animation-name: thor;
-  animation-duration: 6s;
+  animation-duration: 5s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -268,7 +268,7 @@ p {
   }
 
   100% {
-    transform: translateY(140px);
+    transform: translateY(160px);
   }
 }
 
@@ -305,8 +305,8 @@ p {
 
   /*========= Heros======== */
   .thor {
-    margin-right: 10px;
-    margin-top: 8px;
+    width: 140px;
+    height: 160px;
     animation-name: thor;
     animation-duration: 4s;
   }
@@ -357,6 +357,6 @@ p {
   }
 
   100% {
-    transform: translateY(80px);
+    transform: translateY(-150px);
   }
 }
