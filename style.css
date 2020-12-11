@@ -19,7 +19,7 @@
 .thor {
   margin-left: 50%;
   margin-right: 50%;
-  margin-bottom: 100px;
+  margin-bottom: -22%;
   width: 170px;
   height: 200px;
   animation-name: thor;
@@ -268,7 +268,7 @@ p {
   }
 
   100% {
-    transform: translateY(160px);
+    transform: translateY(200px);
   }
 }
 
